@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: th1
-# key: th1
-# --
-TH1${1:?} *${2:var} = new TH1$1("$2","$2",${3:nbin},-${4:range},$4);
