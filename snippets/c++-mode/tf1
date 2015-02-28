@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tf1
+# key: tf1
+# --
+TF1 *${1:var} = new TF1("$1","${2:formula}",-${3:range},$3);

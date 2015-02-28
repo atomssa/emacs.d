@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tfile
+# key: tfile
+# --
+TFile *${1:var} = TFile::Open("${2:path}","${3:RECREATE}");

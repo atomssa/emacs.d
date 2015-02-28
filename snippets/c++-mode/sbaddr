@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sba
+# key: sba
+# --
+SetBranchAddress("${1:branch}",&${2:variable});

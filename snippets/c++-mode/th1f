@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: th1f
+# key: th1f
+# --
+TH1F *${1:var} = new TH1F("$1","$1",${2:nbin},-${3:range},$3);

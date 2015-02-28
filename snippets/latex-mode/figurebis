@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: figurebis
+# key: figb
+# --
+\begin{figure}[ht]
+\centering
+\includegraphics[width=${1:w}\columnwidth]{figs/${2:path.pdf}}
+\end{figure}

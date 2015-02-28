@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: canv
+# key: canv
+# --
+TCanvas *${1:var} = new TCanvas("$1","$1");

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tnew
+# key: tnew
+# --
+${1:TClass} *${2:var} = new $1("$2","$2");

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: th2f
+# key: th2f
+# --
+TH2F *${1:var} = new TH2F("$1","$1",${2:nbinx},-${3:rangex},$3,${4:nbiny},-${5:rangey},$5);

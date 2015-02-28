@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: th2
+# key: th2
+# --
+TH2${1:?} *${2:var} = new TH2$1("$2","$2",${3:nbinx},-${4:rangex},$4,${5:nbiny},-${6:rangey},$6);

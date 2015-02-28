@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: includegraphics
+# key: igw
+# --
+\includegraphics[width=$1\columnwidth]{$0}

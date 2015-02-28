@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: th3f
+# key: th3f
+# --
+TH3F *${1:var} = new TH3F("$1","$1",${2:nbinx},-${3:rangex},$3,${4:nbiny},-${5:rangey},$5,${6:nbiny},-${7:rangey},$7);
