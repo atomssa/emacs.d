@@ -1,0 +1,17 @@
+.mc-lists.el
+.org-id-locations
+ac-comphist.dat
+auto-save-list/
+bookmarks
+compile.log
+custom.el
+ede-projects.el
+elpa/
+eshell/
+org-clock-save.el
+projectile-bookmarks.eld
+projectile.cache
+request/
+semanticdb/
+snippets/
+url/

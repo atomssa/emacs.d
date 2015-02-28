@@ -1,0 +1,70 @@
+User-defined Speed commands
+===========================
+
+Built-in Speed commands
+=======================
+
+Outline Navigation
+------------------
+n->j   (org-speed-move-safe (quote outline-next-visible-heading))
+p->k   (org-speed-move-safe (quote outline-previous-visible-heading))
+f->J   (org-speed-move-safe (quote org-forward-heading-same-level))
+b->K   (org-speed-move-safe (quote org-backward-heading-same-level))
+F->n   org-next-block
+B->p   org-previous-block
+u   (org-speed-move-safe (quote outline-up-heading))
+j->g   org-goto
+g->r   (org-refile t)
+
+Outline Visibility
+------------------
+c   org-cycle
+C   org-shifttab
+org-display-outline-path
+s   org-narrow-to-subtree
+=   org-columns
+
+Outline Structure Editing
+-------------------------
+U   org-shiftmetaup
+D->M   org-shiftmetadown
+r->l   org-metaright
+l->h   org-metaleft
+R->L   org-shiftmetaright
+L->H   org-shiftmetaleft
+i   (progn (forward-char 1) (call-interactively (quote org-insert-heading-respect-content)))
+^   org-sort
+w   org-refile
+a   org-archive-subtree-default-with-confirmation
+@   org-mark-subtree
+#   org-toggle-comment
+
+Clock Commands
+--------------
+I   org-clock-in
+O   org-clock-out
+
+Meta Data Editing
+-----------------
+t   org-todo
+,   (org-priority)
+0   (org-priority 32)
+1   (org-priority 65)
+2   (org-priority 66)
+3   (org-priority 67)
+:   org-set-tags-command
+e   org-set-effort
+E   org-inc-effort
+W   (lambda (m) (interactive "sMinutes before warning: ") (org-entry-put (point) "APPT_WARNTIME" m))
+
+Agenda Views etc
+----------------
+v   org-agenda
+/   org-sparse-tree
+
+Misc
+----
+o   org-open-at-point
+?   org-speed-command-help
+<   (org-agenda-set-restriction-lock (quote subtree))
+>   (org-agenda-remove-restriction-lock)
