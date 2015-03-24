@@ -68,8 +68,10 @@
 (setq ispell-program-name "aspell")
 
 ;;;; enable flyspell in text-mode and flyspell-prog in prog-mode
+;; incompatible with auto-complete without (ac-flyspell-workaround)
+;; call after setting up auto-complete
 (add-hook 'text-mode-hook 'flyspell-mode)
-;;(add-hook 'prog-mode-hook 'flyspell-prog-mode) ;; apparently incompatible with auto-complete
+;; (add-hook 'prog-mode-hook 'flyspell-prog-mode) ;; incompatible with iedit, which is much more useful
 
 ;;;; Ingore mouse events inside emacs. Go full metal on it
 ;;;; Use Alt-arrow key chord to move around buffers and minibuffer

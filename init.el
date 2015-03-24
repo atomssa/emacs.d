@@ -26,7 +26,7 @@
 (require 'setup-modifs-over-commit)
 
 (when (window-system)
- (require 'setup-yasnippet-mode))
+  (require 'setup-yasnippet-mode))
 
 (require 'setup-magit-mode)
 (require 'setup-org-mode)

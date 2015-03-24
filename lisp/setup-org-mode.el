@@ -8,6 +8,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+(setq org-support-shift-select t)
+
 ;; Example of how to set a key to give a command accessible through agenda dispatcher
 ;; The following will define the key C-c a f as a shortcut for creating a sparse tree matching the string ‘emacs’.
 (setq org-agenda-custom-commands '(("e" occur-tree "emacs")))
@@ -25,6 +27,9 @@
 
 ;; better visualisation
 (setq org-hide-leading-stars t)
+
+;; Enalbe using latex symbols (causes issues with auto-complete in latex-mode)
+;;(org-toggle-pretty-entities)
 
 ;; enable speed commands
 (setq org-use-speed-commands t)

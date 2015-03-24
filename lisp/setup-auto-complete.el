@@ -27,6 +27,8 @@
 
 (ac-config-default)
 
+(ac-flyspell-workaround)
+
 ;;--------------------------------------------------------------------
 ;; default gtags implementation sucks (gets stuck on shell execution)
 ;; culprit file is auto-complete-config.el from auto-complete package
@@ -53,5 +55,8 @@
 ;;  Make the min number of chars required before firing gtag a parameter
 ;;  and eventually send a pull request to developpers
 ;;--------------------------------------------------------------------
+
+(message "auto-complete-mode setup done.")
+(message "ac-sources: %s" ac-sources)
 
 (provide 'setup-auto-complete)
