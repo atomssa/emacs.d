@@ -10,6 +10,10 @@
 (require 'setup-package-repo)
 (require 'setup-look)  ;; Improve the look 'n feel
 
+;; experimental!!
+(require 'edit-server)
+(edit-server-start)
+
 ;; Auto indent, trim white lines and stuff
 (require 'setup-auto-indent)
 
