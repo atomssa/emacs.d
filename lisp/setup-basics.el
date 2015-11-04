@@ -129,6 +129,24 @@ used with shift"
 (global-set-key [(mouse-5)] '(lambda () (interactive) (smooth-scroll mss-step+ mss-seq)))
 (global-set-key [(mouse-4)] '(lambda () (interactive) (smooth-scroll mss-step- mss-seq)))
 
+(global-set-key (kbd "s-i") 'indent-region) ;; cooler than opening a line
+
+;; needs debugging. Main objective was to jump to next line after indenting
+;; or indent
+;; TODO: accept prefix argument how many lines to indent and pass it on to the
+;; appropriate indent function
+(defun indent-dwim ()
+  "indent a line and go to the next line or indent all lines in
+region when in transient mode. Do the right thing depending on context.."
+  (interactive)
+  (if (use-region-p)
+      (indent-region (region-beginning) (region-end))
+    (progn
+      (indent-for-tab-command)
+      (next-line)
+      (back-to-indentation))))
+(global-set-key (kbd "s-i") 'indent-dwim)
+
 ;; Random scrolling improvement suggestions from the web that don't work here
 ;;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 ;;(setq mouse-wheel-progressive-speed t) ;; don't accelerate scrolling

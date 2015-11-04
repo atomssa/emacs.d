@@ -5,7 +5,7 @@
 ;;(global-semantic-idle-scheduler-mode 1)
 (global-semantic-stickyfunc-mode 1)
 (global-semantic-decoration-mode 1)
-;;(global-semantic-idle-local-symbol-highlight-mode 1)
+(global-semantic-idle-local-symbol-highlight-mode 1)
 ;;(global-semantic-idle-completions-mode 1)
 ;;(global-semantic-idle-breadcrumbs-mode 1)
 ;;;;(global-semantic-show-unmatched-syntax-mode 1)
@@ -14,8 +14,8 @@
 
 ;;(require 'semantic/ia)
 ;;(require 'semantic/bovine/gcc)
-;;(semanticdb-enable-gnu-global-databases 'c-mode)
-;;(semanticdb-enable-gnu-global-databases 'c++-mode)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
 
 ;;(defun my-cedet-hook ()
 ;;  (local-set-key [(control return)] 'semantic-ia-complete-symbol)

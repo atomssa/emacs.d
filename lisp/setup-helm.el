@@ -18,7 +18,7 @@
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
-(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+(define-key helm-map (kbd "C-z") 'helm-select-action) ; list actions using C-z
 
 (define-key helm-grep-mode-map (kbd "<return>")  'helm-grep-mode-jump-other-window)
 (define-key helm-grep-mode-map (kbd "n")  'helm-grep-mode-jump-other-window-forward)
@@ -54,6 +54,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-b") 'helm-mini) ;; dired sucz
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c h o") 'helm-occur)
@@ -66,7 +67,9 @@
 (define-key 'help-command (kbd "r") 'helm-info-emacs)
 (define-key 'help-command (kbd "C-l") 'helm-locate-library)
 
+(global-set-key (kbd "C-o") 'helm-occur) ;; cooler than opening a line
 (global-set-key (kbd "C-f") 'helm-semantic-or-imenu) ;; much cooler than moving forward by a char
+
 ;;(eval-after-load 'prog-mode
 ;;  '(define-key prog-mode-map (kbd "C-s") 'helm-semantic-or-imenu))
 ;;(eval-after-load 'prog-mode

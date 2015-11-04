@@ -34,18 +34,19 @@ If the package archive info has not been downloaded already (locally
 replaceted in elpa/archives directory) package installation fails.
 To avoid this call list-packages if local archive info is unavailable"
   (interactive)
-  (when (online?)
-    (unless (or (member package package-activated-list)
-                (functionp package))
-      (message "Installing %s" (symbol-name package))
-      ;; Insure that repo information have been downloaded before
-      ;; attempting install. Otherwise it bugs
-      (if (file-exists-p (concat elpa-dir "archives"))
-	  (package-install package)
-	(progn
-	  (list-packages)
-	  (kill-buffer "*Packages*")
-	  (package-install package))))))
+  (when (equal check-missing-packages t)
+    (when (online?)
+      (unless (or (member package package-activated-list)
+		  (functionp package))
+	(message "Installing %s" (symbol-name package))
+	;; Insure that repo information have been downloaded before
+	;; attempting install. Otherwise it bugs
+	(if (file-exists-p (concat elpa-dir "archives"))
+	    (package-install package)
+	  (progn
+	    (list-packages)
+	    (kill-buffer "*Packages*")
+	    (package-install package)))))))
 
 ;;______________________________________________________
 ;; TODO: Find a means to make it select the last one....
@@ -58,9 +59,10 @@ figures in the package directory name)
 If there are multiple versions, it will pick the earliest one
 call (locate-package-dir 'name) if name is the name of the package"
   (interactive)
+  (message "Adding package dir to load path: %s " (symbol-name package))
   (let* ((wild (concat elpa-dir "/" (symbol-name package) "-*"))
 	 (glob (file-expand-wildcards wild))
-	 (dir (locate-file (concat (symbol-name package) ".el") glob)))
+	 (dir (locate-file (concat (symbol-name package) "-pkg.el") glob)))
     (file-name-directory dir)))
 
 (provide 'setup-package-repo)

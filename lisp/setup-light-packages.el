@@ -60,23 +60,23 @@
 ;;---------------------------------------------------------------
 ;; Annoying arrows mode -- woth obnoxious visiaul bell
 ;;---------------------------------------------------------------
-(install-package-if-missing 'annoying-arrows-mode)
-(add-to-list 'load-path (locate-package-dir 'annoying-arrows-mode))
-(require 'annoying-arrows-mode)
-(global-annoying-arrows-mode)
-;;(setq visible-bell 1)
-(setq visible-bell nil)
-;;(setq ring-bell-function `(lambda ()
-;; 			    (set-face-background 'default "DodgerBlue")
-;; 			    (set-face-background 'default "gray12")))
-;; disable annoying arrows mode in buffer
-;; disable for minibuffer -- hoorai, it works
-(add-hook 'minibuffer-setup-hook
-	  (lambda()
-	    (annoying-arrows-mode 0)))
-(add-hook 'minibuffer-exit-hook
-	  (lambda()
-	    (annoying-arrows-mode 1)))
+;;(install-package-if-missing 'annoying-arrows-mode)
+;;(add-to-list 'load-path (locate-package-dir 'annoying-arrows-mode))
+;;(require 'annoying-arrows-mode)
+;;(global-annoying-arrows-mode)
+;;;;(setq visible-bell 1)
+;;(setq visible-bell nil)
+;;;;(setq ring-bell-function `(lambda ()
+;;;; 			    (set-face-background 'default "DodgerBlue")
+;;;; 			    (set-face-background 'default "gray12")))
+;;;; disable annoying arrows mode in buffer
+;;;; disable for minibuffer -- hoorai, it works
+;;(add-hook 'minibuffer-setup-hook
+;;	  (lambda()
+;;	    (annoying-arrows-mode 0)))
+;;(add-hook 'minibuffer-exit-hook
+;;	  (lambda()
+;;	    (annoying-arrows-mode 1)))
 
 
 (install-package-if-missing 'sr-speedbar)
@@ -104,10 +104,11 @@
 (pending-delete-mode t)
 
 
+;; too aggressive for its own good
 ;; doesn't seem to work in c mode...
-(install-package-if-missing 'aggressive-indent)
-(add-to-list 'load-path (locate-package-dir 'aggressive-indent))
-(global-aggressive-indent-mode 1)
+;;(install-package-if-missing 'aggressive-indent)
+;;(add-to-list 'load-path (locate-package-dir 'aggressive-indent))
+;;(global-aggressive-indent-mode 1)
 ;; (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 (provide 'setup-light-packages)

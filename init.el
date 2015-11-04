@@ -4,6 +4,8 @@
 (setq dotfiles-dir (concat emacs-init-dir "lisp/"))
 (add-to-list 'load-path dotfiles-dir)
 
+(setq check-missing-packages nil)
+
 ;; Setup the barebone basic stuff that doesn't require
 ;; any package installation
 (require 'setup-basics)
@@ -29,19 +31,28 @@
 
 (require 'setup-modifs-over-commit)
 
-(when (window-system)
-  (require 'setup-yasnippet-mode))
+(require 'setup-mail)
+
+(require 'setup-yasnippet-mode)
+;;(when (window-system)
+;;  (require 'setup-yasnippet-mode))
 
 (require 'setup-magit-mode)
 (require 'setup-org-mode)
 
-(when (window-system)
-  ;;(require 'setup-ecb-mode)  ;; meh...
-  ;;(require 'setup-tramp-mode)  ;; meh...
-  ;; (require 'setup-ede-mode)
-  (require 'setup-projectile)
-  (require 'setup-helm)
-  (require 'setup-helm-gtags))
+(require 'setup-projectile)
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+;;(when (window-system)
+;;  ;;(require 'setup-ecb-mode)  ;; meh...
+;;  ;;(require 'setup-tramp-mode)  ;; meh...
+;;  ;; (require 'setup-ede-mode)
+;;  (require 'setup-projectile)
+;;  (require 'setup-helm)
+;;  (require 'setup-helm-gtags))
+
+;;(require 'rtags) ;; optional, must have rtags installed
+;;(cmake-ide-setup)
 
 ;; setup cedet on its own
 (require 'setup-cedet)
@@ -54,9 +65,10 @@
 ;; enviromnent specific setups
 (require 'setup-c-mode)
 (require 'setup-golang)
+(require 'setup-rust)
 (require 'setup-cider)
 (require 'setup-web-mode)
 (require 'setup-lisp-mode)
 (require 'setup-android-dev)
 (require 'setup-gdb)
-(require 'setup-pnd-root)
+(put 'downcase-region 'disabled nil)

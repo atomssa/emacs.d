@@ -10,8 +10,11 @@
 (define-prefix-command 'moc-prefix)
 (global-set-key (kbd "C-g") 'moc-prefix)
 ;; Jump to next/previous hunk
-(define-key moc-prefix (kbd "h n") 'git-gutter:next-hunk)
-(define-key moc-prefix (kbd "h p") 'git-gutter:previous-hunk)
+;;(define-key moc-prefix (kbd "h n") 'git-gutter:next-hunk)
+;;(define-key moc-prefix (kbd "h p") 'git-gutter:previous-hunk)
+(define-key moc-prefix (kbd "n") 'git-gutter:next-hunk)
+(define-key moc-prefix (kbd "p") 'git-gutter:previous-hunk)
+
 
 (custom-set-variables
  '(git-gutter:lighter " GG")
