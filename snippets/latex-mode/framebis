@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: framebis
-# key: frame
+# key: fr
 # --
 \begin{frame}
         ${1:\frametitle{$2}}

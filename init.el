@@ -72,3 +72,5 @@
 (require 'setup-android-dev)
 (require 'setup-gdb)
 (put 'downcase-region 'disabled nil)
+
+(message "init.el Setup complete! wooohooo... ")

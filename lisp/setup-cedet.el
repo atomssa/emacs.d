@@ -5,7 +5,7 @@
 ;;(global-semantic-idle-scheduler-mode 1)
 (global-semantic-stickyfunc-mode 1)
 (global-semantic-decoration-mode 1)
-(global-semantic-idle-local-symbol-highlight-mode 1)
+(global-semantic-idle-local-symbol-highlight-mode 0)
 ;;(global-semantic-idle-completions-mode 1)
 ;;(global-semantic-idle-breadcrumbs-mode 1)
 ;;;;(global-semantic-show-unmatched-syntax-mode 1)

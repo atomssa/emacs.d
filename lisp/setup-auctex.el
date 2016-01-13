@@ -1,9 +1,19 @@
 ;;(install-package-if-missing 'acutex)
 (load "auctex.el" nil t t)
 
+;;(load "preview-latex.el" nil t t)
+;;(require 'auto-complete-auctex)
+
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 ;;(setq-default TeX-master nil)
+
+;; The default value of this is (\\\( \\\) \\\[ \\\])
+;; Nice intention (do not break line in the middle of inline equations)
+;; but it has a terrible side effect: It breaks systematically on inline
+;; equation ends even if it is not necessary. Setting it to nil will
+;; remove this 'feature'
+(setq LaTeX-fill-break-at-separators '())
 
 (install-package-if-missing 'ac-math)
 (add-to-list 'load-path (locate-package-dir 'ac-math))
@@ -50,6 +60,8 @@
 		'("PdfLaTeX-SE" "pdflatex -shell-escape %s" TeX-run-command nil t :help "Run LaTex with -shell-escape (minted)") t))
 
 (global-set-key (kbd "<f9>") 'TeX-command-master)
+;;(global-set-key (kbd "<f9>") 'TeX-command-master)
+
 
 
 (provide 'setup-auctex)
