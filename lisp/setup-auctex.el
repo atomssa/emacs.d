@@ -1,4 +1,4 @@
-;;(install-package-if-missing 'acutex)
+(install-package-if-missing 'auctex)
 (load "auctex.el" nil t t)
 
 ;;(load "preview-latex.el" nil t t)
