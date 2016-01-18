@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: bkpframe
+# key: bkpfr
+# --
+\begin{frame}
+  \frametitle{}
+  \begin{block}{}
+    \begin{center}
+      \Huge
+      Backup Slides
+    \end{center}
+  \end{block}
+\end{frame}
