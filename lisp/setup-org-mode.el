@@ -28,6 +28,17 @@
 ;; better visualisation
 (setq org-hide-leading-stars t)
 
+;; PRetty org: From http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html
+(setq org-hide-emphasis-markers t)
+;; Unicode circle for stars
+(font-lock-add-keywords
+ 'org-mode
+ '(("^ +\\([-*]\\) "
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+;; bullets yeah
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;; Enalbe using latex symbols (causes issues with auto-complete in latex-mode)
 ;;(org-toggle-pretty-entities)
 

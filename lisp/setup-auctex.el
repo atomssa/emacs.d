@@ -1,6 +1,9 @@
 (install-package-if-missing 'auctex)
 (load "auctex.el" nil t t)
 
+;; Why didn't i know about this before?
+(setq reftex-plug-into-AUCTeX t)
+
 ;;(load "preview-latex.el" nil t t)
 ;;(require 'auto-complete-auctex)
 
@@ -50,6 +53,7 @@
 	  (append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
 		  ac-sources))
     (setq TeX-master (guess-TeX-master (buffer-file-name)))
+    (turn-on-reftex)
     (message "ac-sources modified by setup-auctex.el")
     (message "ac-sources: %s" ac-sources)))
 

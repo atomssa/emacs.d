@@ -14,7 +14,7 @@
 ;;(define-key moc-prefix (kbd "h p") 'git-gutter:previous-hunk)
 (define-key moc-prefix (kbd "n") 'git-gutter:next-hunk)
 (define-key moc-prefix (kbd "p") 'git-gutter:previous-hunk)
-
+(define-key moc-prefix (kbd "u") 'git-gutter:update-all-windows)
 
 (custom-set-variables
  '(git-gutter:lighter " GG")
