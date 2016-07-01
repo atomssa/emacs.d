@@ -21,4 +21,5 @@
 ;; (add-hook 'web-mode-hook  'web-mode-hook)
 ;; (add-to-list 'web-mode-snippets '("mydiv" "<div>" "</div>"))
 
+(message " -- Done setting up web-mode")
 (provide 'setup-web-mode)

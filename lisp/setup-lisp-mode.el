@@ -28,5 +28,5 @@
 ;;tmp;; ;; Stop the error buffer from popping up while working in the REPL buffer:
 ;;tmp;; (setq nrepl-popup-stacktraces nil)
 
-
+(message " -- Done setting up lisp-mode")
 (provide 'setup-lisp-mode)

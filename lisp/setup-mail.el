@@ -12,5 +12,5 @@
 (autoload 'wl "wl" "Wanderlust" t)
 
 
-
+(message " -- Done setting up mail")
 (provide 'setup-mail)

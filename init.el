@@ -1,4 +1,7 @@
-;;_____________________________________
+;;; init.el -- emacs init file
+;;; Commentary:
+
+;;; Code:
 ;; Add the ~/.emacs.d path to load-path
 (setq emacs-init-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 (setq dotfiles-dir (concat emacs-init-dir "lisp/"))
@@ -62,6 +65,8 @@
 ;; Auto completion with company-mode
 ;; (require 'setup-company)
 
+(require 'setup-flycheck)
+
 ;; enviromnent specific setups
 (require 'setup-c-mode)
 (require 'setup-golang)
@@ -74,3 +79,6 @@
 (put 'downcase-region 'disabled nil)
 
 (message "init.el Setup complete! wooohooo... ")
+
+(provide 'init)
+;;; init.el ends here

@@ -37,4 +37,5 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(message " -- Done setting up auto-indent")
 (provide 'setup-auto-indent)

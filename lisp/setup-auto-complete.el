@@ -22,7 +22,7 @@
 (setq ac-auto-start 3)
 (setq ac-auto-show-menu t)
 
-(add-to-list 'ac-dictionary-directories (expand-file-name "~/.emacs.d/elpa/auto-complete-20140824.1658/dict/"))
+(add-to-list 'ac-dictionary-directories (concat (locate-package-dir 'auto-complete) "dict"))
 (setq ac-comphist-file (expand-file-name "~/.emacs.d/ac-comphist.dat"))
 
 (ac-config-default)
@@ -56,7 +56,7 @@
 ;;  and eventually send a pull request to developpers
 ;;--------------------------------------------------------------------
 
-(message "auto-complete-mode setup done.")
 (message "ac-sources: %s" ac-sources)
 
+(message " -- Done setting up auto-complete")
 (provide 'setup-auto-complete)

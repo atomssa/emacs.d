@@ -17,4 +17,5 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+(message " -- Done setting up magit-mode")
 (provide 'setup-magit-mode)

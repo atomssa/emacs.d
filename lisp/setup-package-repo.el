@@ -67,4 +67,5 @@ call (locate-package-dir 'name) if name is the name of the package"
 	 (dir (locate-file (concat (symbol-name package) "-pkg.el") glob)))
     (file-name-directory dir)))
 
+(message " -- Done setting up package-repo")
 (provide 'setup-package-repo)

@@ -1,3 +1,9 @@
+;;; setup-cedet -- setup cedet mode
+
+;;; Commentary:
+
+;;; Code:
+
 (require 'cc-mode)
 (require 'semantic)
 
@@ -44,6 +50,13 @@
 ;;                      '(project unloaded system recursive))
 ;;(require 'setup-panda-ede-project)
 
-;;(semantic-add-system-include "/Users/tujuba/panda/svn/ext-apr13/tools/root/include" 'c++-mode)
+;;(semantic-add-system-include "/usr/local/include" 'c++mode)
+;;(semantic-add-system-include "/Library/Developer/CommandLineTools/usr/lib/clang/7.0.0/include" 'c++mode)
+;;(semantic-add-system-include "/Library/Developer/CommandLineTools/usr/include" 'c++mode)
+;;(semantic-add-system-include "/usr/include" 'c++mode)
+;;(semantic-add-system-include "/System/Library/Frameworks" 'c++mode)
+;;(semantic-add-system-include "/Library/Frameworks" 'c++mode)
 
+(message " -- Done setting up cedet")
 (provide 'setup-cedet)
+;;; setup-cedet.el ends here

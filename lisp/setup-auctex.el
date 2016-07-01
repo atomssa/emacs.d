@@ -54,8 +54,10 @@
 		  ac-sources))
     (setq TeX-master (guess-TeX-master (buffer-file-name)))
     (turn-on-reftex)
+
     (message "ac-sources modified by setup-auctex.el")
-    (message "ac-sources: %s" ac-sources)))
+    (message "ac-sources: %s" ac-sources)
+    (local-set-key (kbd "<f9>") 'TeX-command-master)))
 
 (add-hook 'TeX-mode-hook 'ac-latex-mode-setup)
 
@@ -63,9 +65,9 @@
   '(add-to-list 'TeX-command-list
 		'("PdfLaTeX-SE" "pdflatex -shell-escape %s" TeX-run-command nil t :help "Run LaTex with -shell-escape (minted)") t))
 
-(global-set-key (kbd "<f9>") 'TeX-command-master)
+
 ;;(global-set-key (kbd "<f9>") 'TeX-command-master)
 
 
-
+(message " -- Done setting up auctex")
 (provide 'setup-auctex)

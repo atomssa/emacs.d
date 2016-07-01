@@ -23,15 +23,39 @@
 ;; arrow on the line number-body separator bar (need to create
 ;; one if there is none), also one can indicate the same downward
 ;; pointing arrow with different fill style to indicate that
-;; there is foldable stuff at a given line. How about coding that
-;; after QM?
+;; there is foldable stuff at a given line.
 ;;---------------------------------------------------------------
 (add-hook 'c-mode-common-hook
 	  (lambda()
+	    (local-set-key (kbd "<f9>")  'compile)
+	    (local-set-key (kbd "C-c C-c")  'compile)
+	    (local-set-key (kbd "s-/")  'comment-dwim)
 	    (local-set-key (kbd "C-c <right>") 'hs-show-block)
 	    (local-set-key (kbd "C-c <left>")  'hs-hide-block)
 	    (local-set-key (kbd "C-c <up>")    'hs-hide-all)
 	    (local-set-key (kbd "C-c <down>")  'hs-show-all)
 	    (hs-minor-mode t)))
 
+(defun next-error-stay ()
+  (interactive)
+  (progn
+    (next-error)
+    (switch-to-buffer-other-window compilation-last-buffer)))
+
+(defun previous-error-stay ()
+  (interactive)
+  (progn
+    (previous-error)
+    (switch-to-buffer-other-window compilation-last-buffer)))
+
+(add-hook 'compilation-mode-hook
+	  (lambda()
+	    (setq next-error-highlight 3)
+	    (local-set-key (kbd "j") 'compilation-next-error)
+	    (local-set-key (kbd "k") 'compilation-previous-error)
+	    (local-set-key (kbd "n") 'next-error-stay)
+	    (local-set-key (kbd "p") 'previous-error-stay)))
+
+(message " -- Done setting up c-mode")
 (provide 'setup-c-mode)
+;;; setup-c-mode.el ends here

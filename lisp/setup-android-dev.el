@@ -8,4 +8,5 @@
 ;;              (add-to-list 'gud-jdb-classpath "~/android-sdk-linux/platforms/android-16/android.jar")
 ;;              ))
 
+(message " -- Done setting up android-dev")
 (provide 'setup-android-dev)

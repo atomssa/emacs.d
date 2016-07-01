@@ -5,4 +5,5 @@
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
+(message " -- Done setting up cider")
 (provide 'setup-cider)

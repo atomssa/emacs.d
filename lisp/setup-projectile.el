@@ -10,4 +10,5 @@
 
 ;; (setq projectile-enable-caching t) ;; option seems to disable using git for project indexing
 
+(message " -- Done setting up projectile")
 (provide 'setup-projectile)

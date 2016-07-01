@@ -1,3 +1,8 @@
+;;; Package -- setup basic
+
+;;; Commentary:
+
+;;; Code:
 (setq user-mail-address "atomssa@ipno.in2p3.fr")
 
 ;; disable C-x C-c from exiting emacs
@@ -92,10 +97,14 @@
 (global-set-key (kbd "s-p") 'narrow-to-page)
 (global-set-key (kbd "s-f") 'narrow-to-defun)
 
-(global-set-key (kbd "C-c f") 'new-frame)
+(global-set-key (kbd "C-c f") 'make-frame)
 (global-set-key (kbd "C-c w") 'delete-frame)
 (global-set-key (kbd "C-x n") 'ns-next-frame)
 (global-set-key (kbd "C-x p") 'ns-prev-frame)
+
+(global-set-key (kbd "C-c e a") 'first-error)
+(global-set-key (kbd "C-c e n") 'next-error)
+(global-set-key (kbd "C-c e p") 'previous-error)
 
 ;; Show line numbers on all buffers
 (global-linum-mode)
@@ -136,14 +145,15 @@ used with shift"
 ;; TODO: accept prefix argument how many lines to indent and pass it on to the
 ;; appropriate indent function
 (defun indent-dwim ()
-  "indent a line and go to the next line or indent all lines in
-region when in transient mode. Do the right thing depending on context.."
+  "Indent a line and go to the next line or indent all lines in
+region when in transient mode.  Do the right thing depending on
+context.."
   (interactive)
   (if (use-region-p)
       (indent-region (region-beginning) (region-end))
     (progn
       (indent-for-tab-command)
-      (next-line)
+      (forward-line)
       (back-to-indentation))))
 (global-set-key (kbd "s-i") 'indent-dwim)
 
@@ -157,4 +167,6 @@ region when in transient mode. Do the right thing depending on context.."
 ;;(setq scroll-conservatively 10000)
 ;;(setq auto-window-vscroll nil)
 
+(message " -- Done setting up basics")
 (provide 'setup-basics)
+;;; setup-basics.el ends here

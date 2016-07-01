@@ -94,4 +94,5 @@
 
 (helm-mode)
 
+(message " -- Done setting up helm")
 (provide 'setup-helm)

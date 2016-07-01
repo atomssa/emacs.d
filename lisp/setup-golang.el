@@ -10,4 +10,5 @@
 ;;(add-to-list 'load-path (locate-package-dir 'go-snippets))
 ;;(require 'go-snippets)
 
+(message " -- Done setting up golang")
 (provide 'setup-golang)

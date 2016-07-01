@@ -92,4 +92,5 @@
 ;; Set the default mode of the scratch buffer to Org
 (setq initial-major-mode 'org-mode)
 
+(message " -- Done setting up org-mode")
 (provide 'setup-org-mode)

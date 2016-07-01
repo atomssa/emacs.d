@@ -1,8 +1,9 @@
 ;;(install-package-if-missing 'monokai-theme)
 ;;(add-to-list 'custom-theme-load-path (locate-package-dir 'monokai-theme))
-;;(load-theme 'monokai t)
+(load-theme 'monokai t)
 
-(load-theme 'dark-krystal t)
+;;(load-theme 'dark-krystal t)
+;;(load-theme 'zenburn t)
 
 ;;(install-package-if-missing 'firecode-theme)
 ;;(add-to-list 'custom-theme-load-path (locate-package-dir 'firecode-theme))
@@ -40,4 +41,5 @@
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(message " -- Done setting up look-n-feel")
 (provide 'setup-look)

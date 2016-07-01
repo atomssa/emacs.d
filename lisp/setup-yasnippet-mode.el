@@ -12,4 +12,5 @@
 ;; yasnippet doesn't play well with term-mode
 (add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
 
+(message " -- Done setting up yasnimppet-mode")
 (provide 'setup-yasnippet-mode)

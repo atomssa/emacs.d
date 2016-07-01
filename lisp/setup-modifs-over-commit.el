@@ -44,4 +44,5 @@
 ;;;;(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
 ;;;;(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
+(message " -- Done setting up git-gutter")
 (provide 'setup-modifs-over-commit)
