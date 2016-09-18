@@ -36,6 +36,7 @@
  '(("^ +\\([-*]\\) "
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 ;; bullets yeah
+(install-package-if-missing 'org-bullets)
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 

@@ -7,7 +7,7 @@
 (setq dotfiles-dir (concat emacs-init-dir "lisp/"))
 (add-to-list 'load-path dotfiles-dir)
 
-(setq check-missing-packages nil)
+(setq check-missing-packages t)
 
 ;; Setup the barebone basic stuff that doesn't require
 ;; any package installation
@@ -34,7 +34,7 @@
 
 (require 'setup-modifs-over-commit)
 
-(require 'setup-mail)
+;;(require 'setup-mail)
 
 (require 'setup-yasnippet-mode)
 ;;(when (window-system)

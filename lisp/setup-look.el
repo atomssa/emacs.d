@@ -1,5 +1,5 @@
-;;(install-package-if-missing 'monokai-theme)
-;;(add-to-list 'custom-theme-load-path (locate-package-dir 'monokai-theme))
+(install-package-if-missing 'monokai-theme)
+(add-to-list 'custom-theme-load-path (locate-package-dir 'monokai-theme))
 (load-theme 'monokai t)
 
 ;;(load-theme 'dark-krystal t)
